@@ -1,6 +1,5 @@
 pizzas = ['mushroom', 'vegetarian', 'sausage', 'pepperoni', 'meat lovers', 'hawaiian']
 
-count = 1
 really = 'really '
 
 for pizza in pizzas:
