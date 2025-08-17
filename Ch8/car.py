@@ -10,6 +10,26 @@ class Car:
         self.year = year
         self.odometer_reading = 0
 
+
+    @property
+    def odometer_reading(self):
+        """Get the current odometer reading."""
+        return self._odometer_reading
+
+    @odometer_reading.setter
+    def odometer_reading(self, value):
+        """Set the odometer reading to a given value."""
+        if value >= 0:
+            self._odometer_reading = value
+        else:
+            print("Odometer reading cannot be negative!")
+            self._odometer_reading = 0
+
+    @odometer_reading.deleter
+    def odometer_reading(self):
+        """Delete the odometer reading."""
+        del self._odometer_reading
+
     def get_descriptive_name(self):
         """Return a neatly formatted descriptive name of the car."""
         long_name = f"{self.year} {self.make} {self.model}"
